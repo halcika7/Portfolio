@@ -59,7 +59,7 @@ const Contact: FC = (): JSX.Element => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'last', ...values }),
+      body: encode({ 'form-name': 'contact', ...values }),
     })
       .then(e => {
         setResp({ message: 'Thank you for sending message', success: true });
@@ -203,7 +203,7 @@ const Contact: FC = (): JSX.Element => {
               </li>
             </ul>
           </div>
-          <form name="last" data-netlify="true">
+          <form name="contact" data-netlify="true">
             <div className="form-group">
               <label htmlFor="email" className={errors.email && 'invalid'}>
                 Email address <span>*</span>
