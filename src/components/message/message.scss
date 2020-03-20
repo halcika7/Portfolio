@@ -1,0 +1,96 @@
+.message {
+  background: rgba(231, 76, 60, 0.7);
+  height: 400px;
+  width: 400px;
+  max-width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+
+  &.success {
+    background: rgba(52, 152, 219, 0.9);
+
+    span {
+      background: rgba(46, 204, 113, 1);
+    }
+  }
+
+  p {
+    font: 400 18px 'Crimson Text', sans-serif;
+    line-height: 2;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  span {
+    background: #e74c3c;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      height: 100px;
+      width: 100px;
+      font-size: 5rem;
+      color: #fff;
+    }
+  }
+
+  @media (max-height: 400px) {
+    height: 300px;
+
+    p {
+      font-size: 16px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    span {
+      padding: 0.5rem;
+      svg {
+        height: 60px;
+        width: 60px;
+        font-size: 2rem !important;
+      }
+    }
+  }
+
+  @media (max-height: 240px) {
+    height: 200px;
+
+    p {
+      font-size: 16px;
+    }
+
+    span {
+      padding: 0.3rem;
+      svg {
+        height: 40px;
+        width: 40px;
+        font-size:1.5rem !important;
+      }
+    }
+  }
+
+  button {
+    padding: 0.4rem 2rem;
+    width: 120px;
+    border: none;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    outline: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

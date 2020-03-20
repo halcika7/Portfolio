@@ -1,0 +1,108 @@
+.not-found {
+  height: 100vh;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 230px;
+    margin: 0px;
+    font-weight: 900;
+    background: url('../images/space.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  h2 {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+
+  p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  a {
+    background: #ff4b36;
+    line-height: 2;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    margin-top: 1rem;
+    padding: 0.7rem 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 686px) {
+    h1 {
+      font-size: 180px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    h1 {
+      font-size: 150px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 120px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    h1 {
+      font-size: 100px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 285px) {
+    h1 {
+      font-size: 80px;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}

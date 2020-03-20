@@ -1,0 +1,66 @@
+.skills {
+  min-height: 100vh;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  section {
+    margin-top: 3rem;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 2rem 2rem 4rem;
+
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+      padding-bottom: 3px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 40px;
+        background: #ff4b36;
+      }
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .gatsby-image-wrapper {
+        height: 100px;
+        width: 100px;
+        margin-right: 2rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 490px) {
+        justify-content: space-between;
+
+        .gatsby-image-wrapper {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 358px) {
+        align-items: center;
+        flex-direction: column;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.portfolio {
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .projects {
+    margin: 2.5rem 0 5rem;
+
+    > h3 {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 4rem;
+      padding-bottom: 3px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 40px;
+        background: #ff4b36;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+
+      @media (max-width: 1200px) {
+        gap: 2rem;
+      }
+
+      @media (max-width: 876px) {
+        gap: 4rem;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

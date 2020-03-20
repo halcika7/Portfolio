@@ -1,0 +1,34 @@
+section.typing {
+  font-size: 19px;
+  color: #fff;
+
+  @media (max-width: 340px) {
+    font-size: 14px;
+  }
+
+  span {
+    position: relative;
+    color: #ff4b36;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      height: 90%;
+      width: 2px;
+      background: #fff;
+      top: 50%;
+      transform: translate(0, -50%);
+      animation: blink .5s infinite ease;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
