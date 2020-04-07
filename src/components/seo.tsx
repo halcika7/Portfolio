@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
 interface SEOProps {
   description?: string;
@@ -45,6 +45,10 @@ function SEO({
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: 'google-site-verification',
+          content: 'hnJZ6F_bd4hww5Dy-xx1LS7FEyIntrrzvyZv6LDu_r8',
         },
         {
           property: `og:url`,
