@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ReactNode } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 const portalRoot =
   typeof document !== 'undefined' ? document.getElementById('portal') : null;
 
-const Portal: React.FC<Props> = ({ children }: Props) => {
+const Portal: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       document.body.classList.add('no-scroll');

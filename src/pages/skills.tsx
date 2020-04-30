@@ -299,12 +299,6 @@ const Skills: FC = (): JSX.Element => {
                 imgStyle={{ objectFit: 'contain' }}
               />
             </span>
-            <span data-tip="RxJS">
-              <Img
-                fluid={data.rxjs.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-              />
-            </span>
           </div>
         </section>
         <section className="backend">
@@ -322,12 +316,6 @@ const Skills: FC = (): JSX.Element => {
                 imgStyle={{ objectFit: 'contain' }}
               />
             </span>
-            <span data-tip="Nest JS">
-              <Img
-                fluid={data.nest.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-              />
-            </span>
             <span data-tip="MongoDB">
               <Img
                 fluid={data.mongo.childImageSharp.fluid}
@@ -337,12 +325,6 @@ const Skills: FC = (): JSX.Element => {
             <span data-tip="PostgreSQL">
               <Img
                 fluid={data.postgres.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-              />
-            </span>
-            <span data-tip="Mocha JS">
-              <Img
-                fluid={data.mocha.childImageSharp.fluid}
                 imgStyle={{ objectFit: 'contain' }}
               />
             </span>
@@ -385,29 +367,6 @@ const Skills: FC = (): JSX.Element => {
           </div>
         </section>
         <section className="tools">
-          <h3>Tools</h3>
-          <div className="images">
-            <span data-tip="Visual Studio Code">
-              <Img
-                fluid={data.vsc.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-              />
-            </span>
-            <span data-tip="Postman">
-              <Img
-                fluid={data.postman.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-              />
-            </span>
-            <span data-tip="Terminal">
-              <Img
-                fluid={data.terminal.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-              />
-            </span>
-          </div>
-        </section>
-        <section className="other">
           <h3>Other</h3>
           <div className="images">
             <span data-tip="Git">
@@ -431,6 +390,24 @@ const Skills: FC = (): JSX.Element => {
             <span data-tip="EsLint">
               <Img
                 fluid={data.eslint.childImageSharp.fluid}
+                imgStyle={{ objectFit: 'contain' }}
+              />
+            </span>
+            <span data-tip="Visual Studio Code">
+              <Img
+                fluid={data.vsc.childImageSharp.fluid}
+                imgStyle={{ objectFit: 'contain' }}
+              />
+            </span>
+            <span data-tip="Postman">
+              <Img
+                fluid={data.postman.childImageSharp.fluid}
+                imgStyle={{ objectFit: 'contain' }}
+              />
+            </span>
+            <span data-tip="Terminal">
+              <Img
+                fluid={data.terminal.childImageSharp.fluid}
                 imgStyle={{ objectFit: 'contain' }}
               />
             </span>

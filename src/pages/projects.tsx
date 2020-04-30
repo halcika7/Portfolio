@@ -83,7 +83,7 @@ const Projects: FC = (): JSX.Element => {
     }
   `);
 
-  const [full, setFull] = useState<Project[]>([
+  const [full] = useState<Project[]>([
     {
       id: 1,
       title: 'Auction App',
@@ -178,7 +178,7 @@ const Projects: FC = (): JSX.Element => {
     },
   ]);
 
-  const [react, setReact] = useState<Project[]>([
+  const [react] = useState<Project[]>([
     {
       id: 5,
       title: 'Burger Builder',
@@ -245,7 +245,7 @@ const Projects: FC = (): JSX.Element => {
     },
   ]);
 
-  const [other, setOther] = useState<Project[]>([
+  const [other] = useState<Project[]>([
     {
       id: 10,
       title: 'Python Project Automation',
@@ -297,7 +297,7 @@ const Projects: FC = (): JSX.Element => {
                 type,
               }) => (
                 <Card
-                  key={id}
+                  key={`${id}-fullstack`}
                   id={id}
                   title={title}
                   frontend={frontend}
@@ -330,7 +330,7 @@ const Projects: FC = (): JSX.Element => {
               }) => {
                 return (
                   <Card
-                    key={id}
+                    key={`${id}-react`}
                     id={id}
                     title={title}
                     frontend={frontend}
@@ -363,7 +363,7 @@ const Projects: FC = (): JSX.Element => {
               }) => {
                 return (
                   <Card
-                    key={id}
+                    key={`${id}-other`}
                     id={id}
                     title={title}
                     frontend={frontend}

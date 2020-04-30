@@ -12,11 +12,7 @@ interface Props {
   clear: () => void;
 }
 
-const Message: FC<Props> = ({
-  message,
-  success,
-  clear,
-}: Props): JSX.Element => {
+const Message: FC<Props> = ({ message, success, clear }): JSX.Element => {
   return (
     <Portal>
       <div className={success ? 'success message' : 'message'}>

@@ -21,7 +21,7 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({
   width,
   directions: { home, about, skills, projects, contact },
-}: HeaderProps): JSX.Element => {
+}): JSX.Element => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
@@ -30,7 +30,7 @@ const Header: FC<HeaderProps> = ({
         <button
           type="button"
           className="toggle"
-          onClick={e => setOpen(prev => !prev)}
+          onClick={() => setOpen(prev => !prev)}
         >
           {open ? <MdClose /> : <FaBars />}
         </button>

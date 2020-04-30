@@ -30,7 +30,7 @@ const Card: FC<Project> = ({
   img,
   type,
   scale,
-}: Project): JSX.Element => {
+}): JSX.Element => {
   return (
     <div className={scale ? 'card scale' : 'card'}>
       <div className="front">

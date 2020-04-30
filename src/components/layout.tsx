@@ -10,10 +10,7 @@ interface LayoutProps {
   directions: Directions;
 }
 
-const Layout: FC<LayoutProps> = ({
-  children,
-  directions,
-}: LayoutProps): JSX.Element => {
+const Layout: FC<LayoutProps> = ({ children, directions }): JSX.Element => {
   const [width, setWidth] = useState<number>(0);
   let wrapper: any = null;
 

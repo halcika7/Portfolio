@@ -9,8 +9,8 @@ interface Props {
 let index = 0;
 let isDeleting = false;
 
-const Typing: React.FC<Props> = ({ start }: Props): JSX.Element => {
-  const [texts, setTexts] = useState<string[]>([
+const Typing: React.FC<Props> = ({ start }): JSX.Element => {
+  const [texts] = useState<string[]>([
     'Full Stack Web Developer',
     '3rd year College Student',
     'Basketball Referee',

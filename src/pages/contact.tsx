@@ -37,7 +37,7 @@ const Contact: FC = (): JSX.Element => {
     success: boolean;
   }>({ message: '', success: false });
 
-  const [loaded, setLoaded] = useState<boolean>(false);
+  const [_, setLoaded] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [recaptcha, setRec] = useState<string>('');
 
@@ -58,7 +58,10 @@ const Contact: FC = (): JSX.Element => {
   const submitForm = () => {
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Access-Control-Allow-Origin': '*',
+      },
       body: encode({ 'form-name': 'contact', ...values }),
     })
       .then(e => {
