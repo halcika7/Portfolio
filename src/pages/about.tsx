@@ -14,6 +14,8 @@ import '../scss/about.scss';
 
 import cv from '../files/HarisBeslic.pdf';
 
+const birth = new Date(1995, 1, 11);
+
 const About: FC = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
@@ -26,6 +28,8 @@ const About: FC = (): JSX.Element => {
       }
     }
   `);
+
+  const date = new Date();
 
   return (
     <Layout
@@ -88,7 +92,12 @@ const About: FC = (): JSX.Element => {
               </div>
               <div className="right">
                 <div>
-                  <GoCalendar /> Age: <span>25</span>
+                  <GoCalendar /> Age:{' '}
+                  <span>
+                    {Math.ceil(
+                      (date.getTime() - birth.getTime()) / 31536000000
+                    )}
+                  </span>
                 </div>
                 <div>
                   <GiConsoleController /> Interests: <br />

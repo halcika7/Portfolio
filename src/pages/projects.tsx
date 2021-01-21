@@ -80,6 +80,13 @@ const Projects: FC = (): JSX.Element => {
           }
         }
       }
+      soft_house: file(relativePath: { eq: "skills/soft_house.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 449, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
@@ -129,7 +136,7 @@ const Projects: FC = (): JSX.Element => {
         'Neverbounce',
       ],
       github: 'https://github.com/halcika7/AuctionApp',
-      url: 'https://polar-lake-39918.herokuapp.com/home',
+      url: '',
       img: data.auction.childImageSharp.fluid,
       type: 'full',
     },
@@ -158,7 +165,7 @@ const Projects: FC = (): JSX.Element => {
       ],
       testing: ['Mocha', 'Chai', 'Supertest'],
       github: 'https://github.com/halcika7/Ecommerce-website',
-      url: 'https://still-waters-45697.herokuapp.com/',
+      url: '',
       img: data.ecom.childImageSharp.fluid,
       type: 'full',
     },
@@ -168,6 +175,7 @@ const Projects: FC = (): JSX.Element => {
       frontend: [
         'React',
         'Redux',
+        'Typescript',
         'Javascript',
         'CSS3',
         'Bootstrap 4',
@@ -177,17 +185,18 @@ const Projects: FC = (): JSX.Element => {
       backend: [
         'Node.js',
         'Express.js',
+        'Typescript',
+        'Inversify',
         'MongoDB',
         'Mongoose',
         'Passport.js',
         'JWT',
         'Google OAuth',
-        'Web Sockets',
         'SendGrid',
       ],
       testing: ['Mocha', 'Chai', 'Supertest'],
-      github: 'https://github.com/halcika7/Printshop',
-      url: 'https://cryptic-cliffs-18144.herokuapp.com/',
+      github: 'https://github.com/halcika7/diplomski',
+      url: '',
       img: data.print.childImageSharp.fluid,
       type: 'full',
     },
@@ -202,6 +211,24 @@ const Projects: FC = (): JSX.Element => {
       img: data.nba.childImageSharp.fluid,
       type: 'full',
     },
+    {
+      id: 5,
+      title: 'Collect Github data',
+      frontend: ['React', 'Styled Components', 'Redux'],
+      backend: [
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Passport.js',
+        'GithubOauth',
+        'Yarn Workspaces',
+      ],
+      github: 'https://github.com/halcika7/JobWeb',
+      img: data.soft_house.childImageSharp.fluid,
+      url: '',
+      type: 'full',
+      scale: true,
+    },
   ]);
 
   const [react] = useState<Project[]>([
@@ -210,7 +237,7 @@ const Projects: FC = (): JSX.Element => {
       title: 'Burger Builder',
       frontend: ['React', 'Redux', 'Firebase'],
       github: 'https://github.com/halcika7/burgerBuilder-react',
-      url: 'https://react-my-burger-49530.firebaseapp.com/',
+      url: '',
       img: data.burger.childImageSharp.fluid,
       type: 'front',
     },
@@ -227,7 +254,7 @@ const Projects: FC = (): JSX.Element => {
         'ESLint',
       ],
       github: 'https://github.com/halcika7/rubicon',
-      url: 'https://rubicon-task.netlify.com/',
+      url: '',
       img: data.rubicon.childImageSharp.fluid,
       type: 'front',
     },
@@ -248,7 +275,27 @@ const Projects: FC = (): JSX.Element => {
       id: 11,
       title: 'NBA Data Scraping',
       frontend: ['Python', 'Selenium', 'Beautiful Soup', 'Requests'],
-      github: 'https://github.com/halcika7/nbaScrapingPython',
+      github: 'https://github.com/halcika7/nba_scraping',
+      url: '',
+      img: data.python.childImageSharp.fluid,
+      type: 'other',
+      scale: true,
+    },
+    {
+      id: 12,
+      title: 'Youtube Downloader',
+      frontend: ['Python', 'Tkinter', 'pytube', 'ffmpeg'],
+      github: 'https://github.com/halcika7/yt_downloader_crop',
+      url: '',
+      img: data.python.childImageSharp.fluid,
+      type: 'other',
+      scale: true,
+    },
+    {
+      id: 13,
+      title: 'Website Blocker',
+      frontend: ['Python', 'Tkinter'],
+      github: 'https://github.com/halcika7/python_website_blocker',
       url: '',
       img: data.python.childImageSharp.fluid,
       type: 'other',
